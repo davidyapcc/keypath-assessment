@@ -1,0 +1,38 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Master of Health Services Management",
+      "created_at": "2023-11-04T02:55:33.619Z",
+      "updated_at": "2023-11-04T02:56:51.129Z",
+      "active": true,
+      "content": [
+        "Range of sub-majors including digital health, leadership and planning",
+        "Drive change across health and social care teams and organisations",
+        "Australia's #1 university under 50 years old (QS Top Universities, 2021)"
+      ],
+      "details": [
+        "24 months (part-time)",
+        "$3,288 per unit FEE HELP available",
+        "12 units"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Master of Health Services Management Majoring in Quality and Safety",
+      "created_at": "2023-11-20T06:46:54.167Z",
+      "updated_at": "2023-11-25T21:59:03.803Z",
+      "active": true,
+      "content": [
+        "Specialise in quality and safety in health and social care settings",
+        "Choose from a range of electives and sub-majors",
+        "Australia's #1 university under 50 years old (QS Top Universities, 2021)"
+      ],
+      "details": [
+        "24 months (part-time)",
+        "$3,288 per unit FEE HELP available",
+        "12 units"
+      ]
+    }
+  ]
+}

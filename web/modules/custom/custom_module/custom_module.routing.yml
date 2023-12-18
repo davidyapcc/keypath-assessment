@@ -1,0 +1,6 @@
+custom_module.json_controller:
+  path: '/json/data.json'
+  defaults:
+    _controller: '\Drupal\custom_module\Controller\JsonController::serveJson'
+  requirements:
+    _permission: 'access content'

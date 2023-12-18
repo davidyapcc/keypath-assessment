@@ -1,0 +1,25 @@
+name: Custom Theme
+type: theme
+description: Just a custom theme that extends from Stable9
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - custom_theme/base
+  - custom_theme/messages
+  - custom_theme/bootstrap
+  - custom_theme/global-styling
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - custom_theme/user
+  core/drupal.dropbutton:
+    - custom_theme/dropbutton
+  core/drupal.dialog:
+    - custom_theme/dialog
+  file/drupal.file:
+    - custom_theme/file
+  core/drupal.progress:
+    - custom_theme/progress
+core_version_requirement: ^9
+generator: 'starterkit_theme:9.5.11'

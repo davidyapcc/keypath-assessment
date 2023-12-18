@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/fastcgi-php.conf:/etc/nginx/snippets/fastcgi-php.conf
+      - .:/var/www/html
+    depends_on:
+      - php
+    networks:
+      - drupalnet
+
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html
+    networks:
+      - drupalnet
+
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: drupal
+      MYSQL_USER: drupal
+      MYSQL_PASSWORD: drupal
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - drupalnet
+
+networks:
+  drupalnet:
+    driver: bridge
+
+volumes:
+  db_data:
