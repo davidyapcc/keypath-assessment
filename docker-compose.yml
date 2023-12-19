@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   nginx:
+    container_name: keypath-assessment-nginx
     image: nginx:latest
     ports:
       - "8080:80"
@@ -15,6 +16,7 @@ services:
       - drupalnet
 
   php:
+    container_name: keypath-assessment-php
     build:
       context: .
       dockerfile: Dockerfile
@@ -24,6 +26,7 @@ services:
       - drupalnet
 
   db:
+    container_name: keypath-assessment-db
     platform: linux/x86_64
     image: mysql:5.7
     ports:

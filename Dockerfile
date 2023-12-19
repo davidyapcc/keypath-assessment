@@ -35,7 +35,7 @@ WORKDIR /var/www/html
 COPY . /var/www/html/
 
 # Install project dependencies using Composer
-RUN composer install --no-dev --optimize-autoloader
+RUN composer install
 
 # Expose port 9000 for PHP-FPM
 EXPOSE 9000
